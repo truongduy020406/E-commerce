@@ -11,6 +11,24 @@
       "Email": "votruongduy2@gmail.com",
       "password": "ab2c@123",
       "id": 2
+    },
+    {
+      "name": "Võ trường duy",
+      "password": "12345678",
+      "Email": "votruongduya2@gmail.com",
+      "id": 3
+    },
+    {
+      "name": "",
+      "password": "",
+      "Email": "",
+      "id": 4
+    },
+    {
+      "username": "",
+      "password": "",
+      "Email": "",
+      "id": 5
     }
   ]
 }

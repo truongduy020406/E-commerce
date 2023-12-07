@@ -1,6 +1,14 @@
-.signup{
+.signup,.signIn{
     text-align: center;
     margin-top: 80px;
     margin-bottom: 50px;
     color: blueviolet;
+}
+
+.showForm{
+    cursor: pointer;
+}
+
+.errorauth{
+    color: red;
 }
