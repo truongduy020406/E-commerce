@@ -2,10 +2,50 @@
     <div *ngIf="showLogin" class="signup">
         <h1>Seller Sign-Up</h1>
         <form #sellerSignUp="ngForm" (ngSubmit)="signUp(sellerSignUp.value)" class="commom-form">
-            <input ngModel name="username" class="form-input" type="text" placeholder="Enter name">
-            <input ngModel name="password" class="form-input" type="password" placeholder="Enter password">
-            <input ngModel name="Email" class="form-input" type="" placeholder="Enter Email">
-            <button class="form-btn">SignUp</button>
+           
+            <mat-form-field appearance="outline">
+                <mat-label>Username</mat-label>
+                <input ngModel matInput name="name" class="form-input-signup" type="text" placeholder="Entername"
+                required
+                #name="ngModel"
+                minlength="6"
+                maxlength="32"
+                [pattern]="usernamePattern"
+                >
+                <mat-error *ngIf="name.touched && !name.valid">
+                    <span *ngIf="name.errors?.['required']">email is required</span>
+                    <span *ngIf="name.errors?.['minlength'] || name.errors?.['maxlength']"> Length from 6 to 32 characters</span>
+                    <span *ngIf="name.errors?.['pattern']">vui lon nhap chi chu cai</span>
+                </mat-error>
+              </mat-form-field>
+              <mat-form-field appearance="outline">
+                <mat-label>Password</mat-label>
+                <input type="password" matInput placeholder="Password" [(ngModel)]="userInfo.password" name="password"
+                required
+                #password="ngModel"
+                minlength="6"
+                maxlength="32"
+                />
+                <mat-error>
+                    <span *ngIf="password.errors?.['required']">password is required</span>
+                    <span *ngIf="password.errors?.['minlength'] || password.errors?.['maxlength']">Length from 6 to 32 characters</span>
+                </mat-error>
+              </mat-form-field>
+              <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                    <input type="text" matInput placeholder="email" [(ngModel)]="userInfo.email" name="email" 
+                    required    
+                    #email="ngModel"
+                    minlength="6"
+                    maxlength="32"
+                    pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                    />
+                    <mat-error *ngIf="email.touched && !email.valid">
+                        <span *ngIf="email.errors?.['required']">email is required</span>
+                        <span *ngIf="email.errors?.['pattern']">vui long nhap dung email</span>
+                    </mat-error>    
+              </mat-form-field>
+            <button class="form-btn" [disabled]="sellerSignUp.invalid">SignUp</button>
             <span href="">Do you have an account yet? <a class="showForm" (click)="OpensignIn()">SignIn</a></span>
         </form>
     </div>
@@ -14,11 +54,38 @@
     <div *ngIf="!showLogin" class="signIn">
         <h1>Seller Login</h1>
         <form #sellerSignIn="ngForm" (ngSubmit)="signiN(sellerSignIn.value)" class="commom-form">
-            <input ngModel name="Email" class="form-input" type="" placeholder="Enter Email">
-            <input ngModel name="password" class="form-input" type="password" placeholder="Enter password">
-            <span class="errorauth">{{authError}}</span>
             
-            <button class="form-btn">SignIn</button>
+            <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                    <input type="text" matInput placeholder="email" [(ngModel)]="userInfo.email" name="email" 
+                    required    
+                    #email="ngModel"
+                    minlength="6"
+                    maxlength="32"
+                    pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                    />
+                    <mat-error *ngIf="email.touched && !email.valid">
+                        <span *ngIf="email.errors?.['required']">email is required</span>
+                        <span *ngIf="email.errors?.['pattern']">vui long nhap dung email</span>
+                      </mat-error>    
+              </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Password</mat-label>
+                <input type="password" matInput placeholder="Password" [(ngModel)]="userInfo.password" name="password"
+                required
+                #password="ngModel"
+                minlength="6"
+                maxlength="32"
+                />
+                <mat-error>
+                    <span *ngIf="password.errors?.['required']">password is required</span>
+                    <span *ngIf="password.errors?.['minlength'] || password.errors?.['maxlength']">Length from 6 to 32 characters</span>
+                </mat-error>
+              </mat-form-field>
+
+
+            <span class="errorauth">{{authError}}</span>
+            <button class="form-btn" [disabled]="sellerSignIn.invalid">SignIn</button>
             <span href="">Do you have an account yet? <a class="showForm" (click)="OpensignUp()">SignUp</a></span>
         </form>
     </div>

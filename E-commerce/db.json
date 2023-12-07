@@ -1,34 +1,16 @@
 {
   "seller": [
     {
-      "name": "Truong Duy",
-      "Email": "votruongduy@gmail.com",
-      "password": "abc@123",
+      "name": "Duyadada",
+      "password": "12345678",
+      "email": "votruongduya2@gmail.com",
       "id": 1
     },
     {
-      "name": "Truong Duy 2",
-      "Email": "votruongduy2@gmail.com",
-      "password": "ab2c@123",
+      "name": "angularee",
+      "password": "123456",
+      "email": "nhathuy1614@gmail.com",
       "id": 2
-    },
-    {
-      "name": "Võ trường duy",
-      "password": "12345678",
-      "Email": "votruongduya2@gmail.com",
-      "id": 3
-    },
-    {
-      "name": "",
-      "password": "",
-      "Email": "",
-      "id": 4
-    },
-    {
-      "username": "",
-      "password": "",
-      "Email": "",
-      "id": 5
     }
   ]
 }

@@ -31,7 +31,8 @@ import { SellerHomeComponent } from './seller-home/seller-home.component';
     HttpClientModule,
     MatInputModule,
     MatButtonModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

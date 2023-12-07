@@ -33,6 +33,7 @@ export class SellService {
     this.http.get(`http://localhost:3000/seller?Email=${data.email}&password=${data.password}`,
     {observe:'response'})
     .subscribe((result:any)=>{
+
         if(result && result.body && result.body.length){
           console.log("user login success!")
           localStorage.setItem('seller',JSON.stringify(result.body));
