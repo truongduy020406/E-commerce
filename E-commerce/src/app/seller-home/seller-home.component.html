@@ -1,1 +1,31 @@
-<p>seller-home works!</p>
+<div class="product-list">
+    <h1>All product List</h1>
+    <p>{{productMessage}}</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Color</th>
+                <th>Category</th>
+                <th>Description</th>    
+                <th>Action</th> 
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of productList ">
+                <td><img src="{{data.imageUrl}}" alt=""></td>
+                <td>{{data.name}}</td>
+                <td>{{data.price}}</td>
+                <td>{{data.color}}</td>
+                <td>{{data.category}}</td>
+                <td>{{data.description}}</td>
+                <td>
+                    <fa-icon (click)="deleteProduct(data.id)" [icon]="icon"></fa-icon>
+                    <a class="adjust-update-link" routerLink="/seller-update-product/{{data.id}}"> <fa-icon  [icon]="iconEdit"></fa-icon></a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

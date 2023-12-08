@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductService } from '../services/product.service';
+import { product } from '../data-type';
+import { faTrash, faEdit } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-seller-home',
@@ -6,10 +9,32 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./seller-home.component.scss']
 })
 export class SellerHomeComponent implements OnInit {
-
-  constructor() { }
+  productList:undefined | product[];
+  productMessage:undefined| string;
+  icon = faTrash;
+  iconEdit=faEdit;
+  constructor(private productService:ProductService) { }
 
   ngOnInit(): void {
+    this.listProDuct()
   }
+  deleteProduct(index:number){
+      this.productService.deleteProduct(index).subscribe((result)=>{
+        if(result){
+          this.productMessage= "delete product success"
+          console.log(result)
+          this.listProDuct()
+        }
+      })
 
+      setTimeout(()=>{
+        this.productMessage=undefined
+      },3000)
+  }
+  listProDuct(){
+    this.productService.getProduct().subscribe((result)=>{
+      console.log(result)
+      this.productList = result
+    })
+  }
 }

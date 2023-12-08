@@ -14,6 +14,10 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { SellerHomeComponent } from './seller-home/seller-home.component';
+import { SellerAddProductComponent } from './seller-add-product/seller-add-product.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SellerUpdateProductComponent } from './seller-update-product/seller-update-product.component';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +25,9 @@ import { SellerHomeComponent } from './seller-home/seller-home.component';
     HeaderComponent,
     HomeComponent,
     SellerAuthComponent,
-    SellerHomeComponent
+    SellerHomeComponent,
+    SellerAddProductComponent,
+    SellerUpdateProductComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +38,8 @@ import { SellerHomeComponent } from './seller-home/seller-home.component';
     MatInputModule,
     MatButtonModule,
     MatFormFieldModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

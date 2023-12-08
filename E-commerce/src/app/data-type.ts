@@ -9,3 +9,13 @@ export interface SignIn{
     password:string
 
 }
+
+export interface product{
+    name:string,
+    price:number,
+    category:string,
+    color:string,
+    description:string,
+    imageUrl:string,
+    id:number
+}

@@ -12,5 +12,34 @@
       "email": "nhathuy1614@gmail.com",
       "id": 2
     }
+  ],
+  "Products": [
+    {
+      "name": "1",
+      "price": "1",
+      "color": "1",
+      "category": "1",
+      "description": "1",
+      "imageUrl": "https://scontent.fhan14-1.fna.fbcdn.net/v/t39.30808-6/405730080_737868141713289_1935262439187665359_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=dd5e9f&_nc_ohc=tpIfDhVAsksAX8748NP&_nc_ht=scontent.fhan14-1.fna&oh=00_AfA6oPuO-FBGShecLVLyljqaSU2UalnPxoTblW6U6ikShg&oe=6577C993",
+      "id": 6
+    },
+    {
+      "name": "22",
+      "price": "22",
+      "color": "2",
+      "category": "2",
+      "description": "2222222222222",
+      "imageUrl": "https://scontent.fhan14-1.fna.fbcdn.net/v/t39.30808-6/406439807_737868291713274_366624887206878218_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=dd5e9f&_nc_ohc=1oN7d6vNF4YAX-imnod&_nc_ht=scontent.fhan14-1.fna&oh=00_AfCeaqiRPl9LdPzRJj0a_7K5NzTt6D32KY1NlrriIfYcHw&oe=657766CD",
+      "id": 7
+    },
+    {
+      "name": "3",
+      "price": "4",
+      "color": "5",
+      "category": "6",
+      "description": "7",
+      "imageUrl": "https://cdn2.cellphones.com.vn/x/media/catalog/product/b/_/b_c_1_11_2_1_1_1.png",
+      "id": 8
+    }
   ]
 }
