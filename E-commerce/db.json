@@ -15,24 +15,6 @@
   ],
   "Products": [
     {
-      "name": "1",
-      "price": "1",
-      "color": "1",
-      "category": "1",
-      "description": "1",
-      "imageUrl": "https://scontent.fhan14-1.fna.fbcdn.net/v/t39.30808-6/405730080_737868141713289_1935262439187665359_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=dd5e9f&_nc_ohc=tpIfDhVAsksAX8748NP&_nc_ht=scontent.fhan14-1.fna&oh=00_AfA6oPuO-FBGShecLVLyljqaSU2UalnPxoTblW6U6ikShg&oe=6577C993",
-      "id": 6
-    },
-    {
-      "name": "22",
-      "price": "22",
-      "color": "2",
-      "category": "2",
-      "description": "2222222222222",
-      "imageUrl": "https://scontent.fhan14-1.fna.fbcdn.net/v/t39.30808-6/406439807_737868291713274_366624887206878218_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=dd5e9f&_nc_ohc=1oN7d6vNF4YAX-imnod&_nc_ht=scontent.fhan14-1.fna&oh=00_AfCeaqiRPl9LdPzRJj0a_7K5NzTt6D32KY1NlrriIfYcHw&oe=657766CD",
-      "id": 7
-    },
-    {
       "name": "3",
       "price": "4",
       "color": "5",
@@ -40,6 +22,42 @@
       "description": "7",
       "imageUrl": "https://cdn2.cellphones.com.vn/x/media/catalog/product/b/_/b_c_1_11_2_1_1_1.png",
       "id": 8
+    },
+    {
+      "name": "Võ trường duy",
+      "price": "1000000",
+      "color": "#a89bb5",
+      "category": "Iphone",
+      "description": "1313",
+      "imageUrl": "https://vb.1cdn.vn/2022/05/26/purple-iphone-14.jpg",
+      "id": 9
+    },
+    {
+      "name": "angular",
+      "price": "1000000",
+      "color": "#a89bb5",
+      "category": "Iphone",
+      "description": "132131",
+      "imageUrl": "https://cdn.sforum.vn/sforum/wp-content/uploads/2022/09/camera-iPhone-14-series.jpg",
+      "id": 10
+    },
+    {
+      "name": "Võ trường duy",
+      "price": "1000000",
+      "color": "2",
+      "category": "2",
+      "description": "2",
+      "imageUrl": "https://vatvostudio.vn/wp-content/uploads/2022/07/iPhone-14-Pro-Max-thiet-ke.jpg",
+      "id": 11
+    },
+    {
+      "name": "anh ne",
+      "price": "1000000",
+      "color": "#a89bb5",
+      "category": "Iphone",
+      "description": "123",
+      "imageUrl": "https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/405297511_1135941180711779_4660900876838979482_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=2GA1l-DpnQIAX-2-eAU&_nc_ht=scontent.fhan14-2.fna&oh=00_AfBZgLeZLjP5mpYghhScYD-b25caDRTcQzZFLTCFk7OcLQ&oe=6578F218",
+      "id": 12
     }
   ]
 }

@@ -1,6 +1,7 @@
 .nav{
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
+    padding: 10px;
 }
 
 .nav h1 {
@@ -35,13 +36,30 @@
     flex: 1;
     color: blueviolet;
     border: 1px solid blueviolet;
-    height: 35px;
+    height: 38px;
     border-right: 0;
 }
 
 .nav .nav-search button {
     color: blueviolet;
     border: 1px solid blueviolet;
-    height: 38.6px;
+    height: 38px;
     border-left: 0;
+}
+
+.suggested-result{
+    position: absolute;
+    display: list-item !important;
+    z-index: 10;
+    background-color: #fff;
+    width: 300px;
+    top: 52px;
+    border: 1px solid #ddd;
+}
+.suggested-result li{
+    border: 1px solid #fff;
+    padding: 5px;
+}   
+.suggested-result li a{
+    cursor: pointer;
 }
