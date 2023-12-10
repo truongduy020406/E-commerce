@@ -20,11 +20,9 @@ export class HomeComponent implements OnInit  {
 
   ngOnInit(): void {
     this.productService.popularProduct().subscribe((data) => {
-
       this.popularProduct = data;
     });
     this.productService.trendyproduct().subscribe((data) => {
-
       this.trendyProduct = data;
     });
     setInterval(() => {

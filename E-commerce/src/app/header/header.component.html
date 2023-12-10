@@ -1,11 +1,13 @@
 <nav class="nav">
     <a style="text-decoration: none;" href="" routerLink="/"><h1>E-commerce</h1></a>
     <div *ngIf="menuType==='default'" class="nav-search">
-        <input (keyup)="searchProduct($event)" type="text" (blur)="hideSearch()" placeholder="Search for Product">
-        <button >Search</button>
+        <input 
+        #searchInput
+        (keyup)="searchProduct($event)" type="text" (blur)="hideSearch()" placeholder="Search for Product">
+        <button (click)="submit(searchInput.value)">Search</button>
         <ul class="suggested-result" *ngIf="searchResult">
             <li *ngFor="let data of searchResult">
-                <a >{{data.name}}</a>
+                <a (mousedown)="redictTodetails(data.id)" >{{data.name}}</a>
             </li>
         </ul>
     </div>
@@ -13,7 +15,7 @@
         <ul *ngSwitchCase="'default'">
             <li><a href="#" routerLink="/">Home</a></li>
             <li><a href="#"routerLink="/seller-auth">Seller</a></li>
-            <li><a href="#">Login</a></li>
+            <li><a routerLink="/user-auth">Login</a></li>
             <li><a href="#">Cart</a></li>
     
         </ul>

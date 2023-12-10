@@ -15,16 +15,16 @@
   ],
   "Products": [
     {
-      "name": "3",
+      "name": "oppo",
       "price": "4",
-      "color": "5",
+      "color": "blue",
       "category": "6",
       "description": "7",
       "imageUrl": "https://cdn2.cellphones.com.vn/x/media/catalog/product/b/_/b_c_1_11_2_1_1_1.png",
       "id": 8
     },
     {
-      "name": "Võ trường duy",
+      "name": "iphone",
       "price": "1000000",
       "color": "#a89bb5",
       "category": "Iphone",
@@ -42,18 +42,18 @@
       "id": 10
     },
     {
-      "name": "Võ trường duy",
+      "name": "oppo",
       "price": "1000000",
-      "color": "2",
+      "color": "black",
       "category": "2",
       "description": "2",
       "imageUrl": "https://vatvostudio.vn/wp-content/uploads/2022/07/iPhone-14-Pro-Max-thiet-ke.jpg",
       "id": 11
     },
     {
-      "name": "anh ne",
+      "name": "muc tieu",
       "price": "1000000",
-      "color": "#a89bb5",
+      "color": "blue",
       "category": "Iphone",
       "description": "123",
       "imageUrl": "https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/405297511_1135941180711779_4660900876838979482_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=2GA1l-DpnQIAX-2-eAU&_nc_ht=scontent.fhan14-2.fna&oh=00_AfBZgLeZLjP5mpYghhScYD-b25caDRTcQzZFLTCFk7OcLQ&oe=6578F218",

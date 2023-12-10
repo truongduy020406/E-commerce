@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { product } from '../data-type';
 import { ProductService } from '../services/product.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-seller-update-product',
@@ -11,7 +11,7 @@ import { ActivatedRoute } from '@angular/router';
 export class SellerUpdateProductComponent implements OnInit {
   updateProductMessage:string|undefined="";
   productDaTa :product|undefined;
-  constructor(private productSevice:ProductService, private route:ActivatedRoute) { }
+  constructor(private productSevice:ProductService, private route:ActivatedRoute , private router: Router) { }
 
   ngOnInit(): void {
       let productId = this.route.snapshot.paramMap.get('id');
@@ -28,6 +28,7 @@ export class SellerUpdateProductComponent implements OnInit {
       this.productSevice.updateProduct(data).subscribe((data)=>{
         if(data){
           this.updateProductMessage= "update product succsess"
+          // this.router.navigate(['seller-home'])
         }
       })
       setTimeout(()=>{

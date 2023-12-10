@@ -22,7 +22,6 @@ export class SellerHomeComponent implements OnInit {
       this.productService.deleteProduct(index).subscribe((result)=>{
         if(result){
           this.productMessage= "delete product success"
-          console.log(result)
           this.listProDuct()
         }
       })
@@ -33,7 +32,6 @@ export class SellerHomeComponent implements OnInit {
   }
   listProDuct(){
     this.productService.getProduct().subscribe((result)=>{
-      console.log(result)
       this.productList = result
     })
   }

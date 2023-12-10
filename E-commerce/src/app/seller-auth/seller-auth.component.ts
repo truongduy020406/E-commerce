@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { SellService } from '../services/sell.service';
 import { Router } from '@angular/router';
 import { SignUp } from '../data-type';
-import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-seller-auth',
