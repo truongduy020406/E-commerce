@@ -59,5 +59,25 @@
       "imageUrl": "https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/405297511_1135941180711779_4660900876838979482_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=2GA1l-DpnQIAX-2-eAU&_nc_ht=scontent.fhan14-2.fna&oh=00_AfBZgLeZLjP5mpYghhScYD-b25caDRTcQzZFLTCFk7OcLQ&oe=6578F218",
       "id": 12
     }
+  ],
+  "users": [
+    {
+      "name": "duyvone",
+      "email": "votruongduy@gmail.com",
+      "password": "12345678",
+      "id": 1
+    },
+    {
+      "name": "angular",
+      "email": "truongduyu15@gmail.com",
+      "password": "123456789",
+      "id": 2
+    },
+    {
+      "name": "angular",
+      "email": "vothimyduyen095@gmail.com",
+      "password": "12345678",
+      "id": 3
+    }
   ]
 }

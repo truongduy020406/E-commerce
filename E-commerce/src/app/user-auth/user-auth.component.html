@@ -1,4 +1,5 @@
 <div class="user-auth">
+   <div *ngIf="show">
     <h1>User Sign up</h1>
     <form class="commom-form" action="" #userSignup="ngForm" (ngSubmit)="signUp(userSignup.value)">
         <mat-form-field appearance="outline">
@@ -18,6 +19,20 @@
         </mat-form-field>
 
         <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+                <input type="text" matInput placeholder="email" [(ngModel)]="userInfo.email" name="email" 
+                    required    
+                    #email="ngModel"
+                    minlength="6"
+                    maxlength="32"
+                    pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                    />
+                <mat-error *ngIf="email.touched && !email.valid">
+                    <span *ngIf="email.errors?.['required']">email is required</span>
+                    <span *ngIf="email.errors?.['pattern']">vui long nhap dung email</span>
+                </mat-error>    
+        </mat-form-field>
+        <mat-form-field appearance="outline">
             <mat-label>Password</mat-label>
             <input type="password" matInput placeholder="Password" [(ngModel)]="userInfo.password" name="password"
                 required
@@ -30,7 +45,16 @@
                 <span *ngIf="password.errors?.['minlength'] || password.errors?.['maxlength']">Length from 6 to 32 characters</span>
             </mat-error>
         </mat-form-field>
+        <button class="form-btn" [disabled]="userSignup.invalid">SignUp</button>
+        <span href="">Do you have an account yet? <a style="cursor: pointer;" (click)="showLogin()" >SignIn</a></span>
+    </form>
+   </div>
 
+
+    <div *ngIf="!show">
+        <h1>User Login</h1>
+    <form class="commom-form" action="" #userLogin="ngForm" (ngSubmit)="Login(userLogin.value)">
+        <p>{{authError}}</p>
         <mat-form-field appearance="outline">
             <mat-label>Email</mat-label>
                 <input type="text" matInput placeholder="email" [(ngModel)]="userInfo.email" name="email" 
@@ -45,6 +69,21 @@
                     <span *ngIf="email.errors?.['pattern']">vui long nhap dung email</span>
                 </mat-error>    
         </mat-form-field>
-        <button class="form-btn" [disabled]="userSignup.invalid">SignUp</button>
+        <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input type="password" matInput placeholder="Password" [(ngModel)]="userInfo.password" name="password"
+                required
+                #password="ngModel"
+                minlength="6"
+                maxlength="32"
+                />
+            <mat-error>
+                <span *ngIf="password.errors?.['required']">password is required</span>
+                <span *ngIf="password.errors?.['minlength'] || password.errors?.['maxlength']">Length from 6 to 32 characters</span>
+            </mat-error>
+        </mat-form-field>
+        <button class="form-btn" [disabled]="userLogin.invalid">Login</button>
+        <span href="">Do you have an account yet? <a style="cursor: pointer;" (click)="showSignUp()">SignUp</a></span>
     </form>
+    </div>
 </div>

@@ -11,28 +11,39 @@ import { product } from '../data-type';
 export class HeaderComponent implements OnInit {
   menuType: string = 'default';
   sellerName:string   = '';
+  userName:string   = '';
+
   searchResult : undefined | product[];
   constructor(private router:Router ,private product:ProductService) { }
 
   ngOnInit(): void {
-    this.router.events.subscribe((val:any)=>{
-        if(val.url){
-          if(localStorage.getItem('seller') && val.url.includes('seller')){
-            this.menuType= 'seller'
-            if(localStorage.getItem('seller')){
-              let sellerStore = localStorage.getItem('seller');
-              let sellerData = sellerStore && JSON.parse(sellerStore)[0];
-              this.sellerName= sellerData.name
-            }
-          }else{
-            this.menuType='default'
-          }
+    this.router.events.subscribe((val: any) => {
+      if (val.url) {
+        if (localStorage.getItem('seller') && val.url.includes('seller')) {
+          let sellerStore=localStorage.getItem('seller');
+          let sellerData =sellerStore && JSON.parse(sellerStore)[0];
+          this.sellerName=sellerData.name;
+          this.menuType = 'seller';
         }
-    })
+        else if(localStorage.getItem('user')){
+          let userStore = localStorage.getItem('user');
+          let userData = userStore && JSON.parse(userStore);
+          this.userName= userData.name;
+          this.menuType='user';
+        }
+         else {
+          this.menuType = 'default';
+        }
+      }
+    });
   }
   logout(){
     localStorage.removeItem('seller');
     this.router.navigate(['/'])
+  }
+  userLogout(){
+    localStorage.removeItem('user');
+    this.router.navigate(['/user-auth'])
   }
   searchProduct(query:KeyboardEvent){
       if(query){
@@ -55,4 +66,5 @@ export class HeaderComponent implements OnInit {
   redictTodetails(id:number){ 
     this.router.navigate([`details/${id}`])
   }
+  
 }

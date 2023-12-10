@@ -22,8 +22,16 @@
         <ul *ngSwitchCase="'seller'">
             <li><a href="#" routerLink="/seller-home">Product List</a></li>
             <li><a href="#"routerLink="/seller-add-product">Add producr</a></li>
-            <li><a (click)="logout()">Logout</a></li>
+            <li><a style="cursor: pointer;" (click)="logout()">Logout</a></li>
             <li><a href="#">{{sellerName | titlecase}}</a></li>
+    
+        </ul>
+        <ul *ngSwitchCase="'user'">
+            <li><a  >Seller</a></li>
+            <li><a >Home</a></li>
+            <li><a >{{userName | titlecase}} </a></li>
+            <li><a style="cursor: pointer;" (click)="userLogout()" >Logout</a></li>
+            <li><a >Cart</a></li>
     
         </ul>
     </div>
