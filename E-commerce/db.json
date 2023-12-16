@@ -16,7 +16,7 @@
   "Products": [
     {
       "name": "oppo",
-      "price": "4",
+      "price": "400000",
       "color": "blue",
       "category": "6",
       "description": "7",
@@ -25,7 +25,7 @@
     },
     {
       "name": "iphone",
-      "price": "1000000",
+      "price": "500000",
       "color": "#a89bb5",
       "category": "Iphone",
       "description": "1313",
@@ -34,7 +34,7 @@
     },
     {
       "name": "angular",
-      "price": "1000000",
+      "price": "200000",
       "color": "#a89bb5",
       "category": "Iphone",
       "description": "132131",
@@ -52,12 +52,21 @@
     },
     {
       "name": "muc tieu",
-      "price": "1000000",
+      "price": "700000",
       "color": "blue",
       "category": "Iphone",
       "description": "123",
       "imageUrl": "https://scontent.fsgn2-9.fna.fbcdn.net/v/t39.30808-6/405297511_1135941180711779_4660900876838979482_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=efb6e6&_nc_eui2=AeEIuXxjxQAS9P4YG2gSc0BkuvgMV-_V3u26-AxX79Xe7ZTM5OkOzPBf4f6sf5IAdKRq44Bd1jnTiu0CooB4BFo4&_nc_ohc=7-PNj0EeGI4AX-SQoA8&_nc_ht=scontent.fsgn2-9.fna&oh=00_AfAIqy82bS-1PPCn6kpeHrpVh0b3fMy5ue8gTaJGl0IrEQ&oe=6580DB18",
       "id": 12
+    },
+    {
+      "name": "samsum",
+      "price": "450000",
+      "color": "red",
+      "category": "han cuoc",
+      "description": "no de",
+      "imageUrl": "https://scontent.fsgn2-9.fna.fbcdn.net/v/t39.30808-6/406416075_737868358379934_435459338901499477_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=dd5e9f&_nc_eui2=AeGiSUBlfpyjfvRxzR_GiPRrNPZq1C22XBo09mrULbZcGh99oWpmqh0Yxh8x7V3GPX3_18Lc_dSnBx4k1E5rPmnY&_nc_ohc=pp7YtfVIneUAX_t1B9i&_nc_ht=scontent.fsgn2-9.fna&oh=00_AfAmM4XxFtuhZnE5T6B78LD0p_dugA1rwcS6nCEfjHmszA&oe=65827A9B",
+      "id": 13
     }
   ],
   "users": [
@@ -83,7 +92,43 @@
   "cart": [
     {
       "name": "oppo",
-      "price": "4",
+      "price": "1000000",
+      "color": "black",
+      "category": "2",
+      "description": "2",
+      "imageUrl": "https://vatvostudio.vn/wp-content/uploads/2022/07/iPhone-14-Pro-Max-thiet-ke.jpg",
+      "quantity": 1,
+      "productId": 11,
+      "userId": 2,
+      "id": 4
+    },
+    {
+      "name": "oppo",
+      "price": "1000000",
+      "color": "black",
+      "category": "2",
+      "description": "2",
+      "imageUrl": "https://vatvostudio.vn/wp-content/uploads/2022/07/iPhone-14-Pro-Max-thiet-ke.jpg",
+      "quantity": 1,
+      "productId": 11,
+      "userId": 2,
+      "id": 5
+    },
+    {
+      "name": "angular",
+      "price": "1000000",
+      "color": "#a89bb5",
+      "category": "Iphone",
+      "description": "132131",
+      "imageUrl": "https://cdn.sforum.vn/sforum/wp-content/uploads/2022/09/camera-iPhone-14-series.jpg",
+      "quantity": 1,
+      "userId": 2,
+      "productId": 10,
+      "id": 6
+    },
+    {
+      "name": "oppo",
+      "price": "400000",
       "color": "blue",
       "category": "6",
       "description": "7",
@@ -91,19 +136,17 @@
       "quantity": 1,
       "userId": 1,
       "productId": 8,
-      "id": 1
-    },
+      "id": 7
+    }
+  ],
+  "orders": [
     {
-      "name": "muc tieu",
-      "price": "1000000",
-      "color": "blue",
-      "category": "Iphone",
-      "description": "123",
-      "imageUrl": "https://scontent.fsgn2-9.fna.fbcdn.net/v/t39.30808-6/405297511_1135941180711779_4660900876838979482_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=efb6e6&_nc_eui2=AeEIuXxjxQAS9P4YG2gSc0BkuvgMV-_V3u26-AxX79Xe7ZTM5OkOzPBf4f6sf5IAdKRq44Bd1jnTiu0CooB4BFo4&_nc_ohc=7-PNj0EeGI4AX-SQoA8&_nc_ht=scontent.fsgn2-9.fna&oh=00_AfAIqy82bS-1PPCn6kpeHrpVh0b3fMy5ue8gTaJGl0IrEQ&oe=6580DB18",
-      "quantity": 1,
+      "email": "votruongduya2@gmail.com",
+      "address": "Mân quang 18",
+      "contact": "0986903253",
+      "totalPrice": 2400100,
       "userId": 1,
-      "productId": 12,
-      "id": 2
+      "id": 1
     }
   ]
 }

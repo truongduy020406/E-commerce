@@ -13,6 +13,7 @@ export class ProductDetailsComponent implements OnInit {
   productData: undefined | product;
   productQuantity:number=1;
   removeCart = false;
+  cartData: product | undefined ;
   constructor(private product:ProductService,private route:ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -37,6 +38,7 @@ export class ProductDetailsComponent implements OnInit {
         this.product.cartData.subscribe((result)=>{
           let items =  result.filter((item:product)=> productId?.toString() === item.productId?.toString())
           if(items.length){
+            this.cartData = items[0];
             this.removeCart=true
           }
         })
@@ -61,7 +63,6 @@ export class ProductDetailsComponent implements OnInit {
         this.product.localAddToCart(this.productData);
         this.removeCart = true
       }else{
-        console.log('loi roi me oi')
         let user = localStorage.getItem('user');
         let userId = user && JSON.parse(user).id;
         let CartData:cart = {
@@ -82,7 +83,19 @@ export class ProductDetailsComponent implements OnInit {
   }
   //remove cart
   RemoveCart(productId:number){
-    this.product.removeItemFromCart(productId)
+    if(!localStorage.getItem('user')){    
+      this.product.removeItemFromCart(productId)
+      
+    }else{
+      let user = localStorage.getItem('user');
+        let userId = user && JSON.parse(user).id;
+     this.cartData && this.product.removeCart(this.cartData.id)
+     .subscribe((result)=>{
+        if(result){
+          this.product.getCart(userId)
+        }
+     })
+    }
     this.removeCart = false
   }
 }
