@@ -16,7 +16,6 @@ export class SearchComponent implements OnInit {
     let result = this.route.snapshot.paramMap.get('query')
     result && this.product.searchProduct(result).subscribe((result)=>{
       this.searchResult=result
-      console.log(this.searchResult)
     })
   }
 

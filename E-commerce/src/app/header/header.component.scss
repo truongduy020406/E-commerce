@@ -1,6 +1,12 @@
+.header{
+    border:2px solid #ddd;
+    background-color: aquamarine;
+    box-shadow:aqua;
+}
 .nav{
     display: flex;
     justify-content: space-between;
+
     padding: 10px;
 }
 

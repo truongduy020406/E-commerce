@@ -29,6 +29,18 @@ export class HomeComponent implements OnInit  {
       this.currentSlide = (this.currentSlide + 1) % (this.popularProduct!.length || 1);
     }, 1000);
   }
+
+  sort(order:string){
+    if(order === 'asc'){
+      this.trendyProduct?.sort((p1,p2)=>{
+        return p1.price > p2.price ? 1 : -1
+      })
+    }else if(order === 'dsc'){
+      this.trendyProduct?.sort((p1,p2)=>{
+        return p1.price << p2.price ? -1 : 1
+      })
+    }
+  }
 }
 
 

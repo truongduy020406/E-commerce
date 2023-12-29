@@ -89,7 +89,6 @@ export class ProductService {
     let userData = userStore && JSON.parse(userStore);
     return this.http.get<cart[]>('http://localhost:3000/cart?userId=' + userData.id);
   }
-
   orderNow(data:order){
     return this.http.post('http://localhost:3000/orders',data);
   }

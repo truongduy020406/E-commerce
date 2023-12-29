@@ -88,9 +88,9 @@ export class ProductDetailsComponent implements OnInit {
       
     }else{
       let user = localStorage.getItem('user');
-        let userId = user && JSON.parse(user).id;
-     this.cartData && this.product.removeCart(this.cartData.id)
-     .subscribe((result)=>{
+      let userId = user && JSON.parse(user).id;
+      this.cartData && this.product.removeCart(this.cartData.id)
+      .subscribe((result)=>{
         if(result){
           this.product.getCart(userId)
         }
