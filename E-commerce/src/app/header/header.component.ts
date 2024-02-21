@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ProductService } from '../services/product.service';
 import { product } from '../data-type';
 
@@ -15,11 +15,14 @@ export class HeaderComponent implements OnInit {
 
   searchResult : undefined | product[];
   cartItem: number = 0;
-  constructor(private router:Router ,private product:ProductService) { }
+  constructor(private router:Router ,private product:ProductService, private route:ActivatedRoute) { }
 
   ngOnInit(): void {
+    
     this.router.events.subscribe((val: any) => {
       if (val.url) {
+        console.log('1',val)
+        console.log('2',val.url)
         if (localStorage.getItem('seller') && val.url.includes('seller')) {
           let sellerStore=localStorage.getItem('seller');
           let sellerData =sellerStore && JSON.parse(sellerStore)[0];
